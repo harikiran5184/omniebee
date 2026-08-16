@@ -6,15 +6,7 @@ const nextConfig: NextConfig = {
     domains: ["res.cloudinary.com"],
     unoptimized: true,
   },
-  basePath:
-    process.env.NODE_ENV === "production"
-      ? "/omniebee-global-solutions"
-      : "",
-
-  assetPrefix:
-    process.env.NODE_ENV === "production"
-      ? "/omniebee-global-solutions/"
-      : "",
+  basePath: "/omniebee",
 };
 
 export default nextConfig;
