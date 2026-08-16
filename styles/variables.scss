@@ -1,0 +1,30 @@
+
+$primary-blue: #2E3E95;
+$secondary-blue: #479BC9;
+$accent-blue: #56B9F0;
+$accent-light: #61c1f5;
+$text-dark: #000000;
+$bg-light: #FFFFFF;
+$gray-light: #f7f7f7;
+$gray-text: #6B7280;
+$white: #ffffff;
+
+
+$font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+
+$mobile: 640px;
+$tablet: 768px;
+$desktop: 1024px;
+$large-desktop: 1280px;
+
+
+$container-max-width: 1280px;
+$header-height: 60px;
+$topbar-height: 64px;
+
+
+$transition-fast: 0.2s ease;
+$transition-normal: 0.3s ease;
+$transition-slow: 0.5s ease;
+$ease-custom: cubic-bezier(0.65, 0, 0.076, 1);

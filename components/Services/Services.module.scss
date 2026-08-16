@@ -1,0 +1,521 @@
+.section {
+  width: 100%;
+
+  padding: 24px;
+
+  max-width: 1024px;
+
+  margin: 0 auto;
+}
+
+
+
+
+.heading {
+  margin: 0 0 12px;
+
+  color: #2e3e95;
+
+  text-align: center;
+
+  font-size: 30px;
+
+  font-weight: 700;
+
+  line-height: 1.25;
+}
+
+.headingLine {
+  width: 120px;
+
+  margin: 0 auto 32px;
+
+  border: 0;
+
+  border-top: 3px solid #2e3e95;
+}
+
+
+
+
+.servicesGrid {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 24px;
+}
+
+
+
+
+.sideColumn {
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: space-between;
+
+  gap: 24px;
+}
+
+.centerColumn {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 24px;
+}
+
+
+
+
+.smallCard,
+.tallCard {
+  position: relative;
+
+  display: block;
+
+  overflow: hidden;
+
+  width: 350px;
+
+  flex-shrink: 0;
+
+  text-decoration: none;
+
+  cursor: pointer;
+
+  background: #111;
+
+  transform: translateZ(0);
+}
+
+.smallCard {
+  height: 140px;
+
+  border-radius: 20px;
+}
+
+.tallCard {
+  height: 150px;
+
+  border-radius: 20px;
+}
+
+
+
+
+.image {
+  z-index: 0;
+
+  object-fit: cover;
+
+  transition:
+    transform 700ms ease;
+}
+
+.smallCard:hover .image,
+.tallCard:hover .image {
+  transform: scale(1.05);
+}
+
+
+
+
+.overlay {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 10;
+
+  background: rgba(0, 0, 0, 0.6);
+}
+
+
+
+
+.smallContent {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 20;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: space-between;
+
+  padding: 8px 20px 24px;
+
+  color: #ffffff;
+}
+
+
+
+
+.cardHeader {
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  width: 100%;
+}
+
+.cardHeader span {
+  color: #ffffff;
+
+  font-size: 16px;
+
+  font-weight: 600;
+
+  text-align: left;
+}
+
+.smallTop .cardHeader span {
+  font-size: 18px;
+}
+
+.arrow {
+  position: absolute;
+
+  top: 4px;
+
+  right: 0;
+
+  flex-shrink: 0;
+}
+
+
+
+
+.smallDescription {
+  color: #ffffff;
+
+  font-size: 12px;
+
+  font-weight: 400;
+
+  line-height: 1.4;
+
+  text-align: left;
+
+  opacity: 0;
+
+  transform: translateY(16px);
+
+  transition:
+    opacity 500ms ease,
+    transform 500ms ease;
+}
+
+.smallCard:hover .smallDescription {
+  opacity: 1;
+
+  transform: translateY(-5px);
+}
+
+
+
+
+.tagsWrapper {
+  position: relative;
+
+  overflow: hidden;
+
+  width: 100%;
+
+  height: 30px;
+
+  opacity: 0;
+
+  transition:
+    opacity 500ms ease;
+}
+
+.smallCard:hover .tagsWrapper {
+  opacity: 1;
+}
+
+.tags {
+  display: flex;
+
+  gap: 8px;
+
+  width: max-content;
+
+  min-width: 200%;
+
+  animation: scrollTags 12s linear infinite;
+}
+
+.tags span {
+  display: inline-block;
+
+  padding: 4px 12px;
+
+  border: 1px solid #ffffff;
+
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.2);
+
+  color: #ffffff;
+
+  font-size: 12px;
+
+  white-space: nowrap;
+}
+
+
+
+
+.tallCard {
+  position: relative;
+}
+
+.tallContent {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 20;
+
+  display: flex;
+
+  flex-direction: column;
+
+  color: #ffffff;
+}
+
+.tallHeader {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  width: 100%;
+
+  padding: 20px;
+}
+
+.tallHeader span {
+  color: #ffffff;
+
+  font-size: 16px;
+
+  font-weight: 600;
+
+  text-align: left;
+}
+
+
+
+
+.dots {
+  position: absolute;
+
+  left: 50%;
+
+  bottom: 16px;
+
+  z-index: 20;
+
+  display: flex;
+
+  gap: 8px;
+
+  transform: translateX(-50%);
+}
+
+.dots span {
+  width: 40px;
+
+  height: 4px;
+
+  border-radius: 999px;
+
+  background: #6b7280;
+
+  transition:
+    background-color 300ms ease;
+}
+
+.dots .activeDot {
+  background: #ffffff;
+}
+
+
+
+
+.tallDescription {
+  padding: 12px 20px;
+
+  color: #ffffff;
+
+  font-size: 12px;
+
+  line-height: 1.5;
+
+  text-align: left;
+
+  opacity: 0;
+
+  transition:
+    opacity 500ms ease;
+}
+
+.tallCard:hover .tallDescription {
+  opacity: 1;
+}
+
+
+
+
+@keyframes scrollTags {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+
+
+
+@media (min-width: 768px) {
+
+  .servicesGrid {
+    flex-direction: row;
+
+    align-items: center;
+
+    gap: 24px;
+  }
+
+  .sideColumn {
+    height: 500px;
+
+    width: 224px;
+  }
+
+  .centerColumn {
+    height: 500px;
+
+    flex-direction: row;
+
+    gap: 24px;
+  }
+
+  .smallCard {
+    width: 224px;
+
+    height: 140px;
+
+    border-radius: 16px;
+  }
+
+  .smallTop {
+    height: 350px;
+
+    border-radius:
+      150px
+      40px
+      40px
+      40px;
+  }
+
+  .smallBottom {
+    border-radius: 40px;
+  }
+
+  .tallCard {
+    width: 192px;
+
+    height: 500px;
+
+    border-radius: 40px;
+  }
+
+  .smallContent {
+    padding-top: 80px;
+  }
+
+  .smallBottom .smallContent {
+    padding-top: 16px;
+  }
+
+  .tallDescription {
+    padding-top: 12px;
+  }
+}
+
+
+
+
+@media (min-width: 1024px) {
+
+  .section {
+    max-width: 1024px;
+  }
+
+  .servicesGrid {
+    gap: 24px;
+  }
+}
+
+
+
+
+@media (max-width: 767px) {
+
+  .smallCard,
+  .tallCard {
+    width: 350px;
+
+    max-width: calc(100vw - 48px);
+  }
+
+  .smallCard {
+    height: 140px;
+  }
+
+  .tallCard {
+    height: 150px;
+  }
+
+  
+
+  .smallBottom .tagsWrapper {
+    opacity: 1;
+
+    height: 30px;
+  }
+
+  
+
+  .smallDescription,
+  .tallDescription {
+    opacity: 1;
+
+    transform: none;
+  }
+}

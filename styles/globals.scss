@@ -1,0 +1,244 @@
+@import "variables";
+@import "mixins";
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  font-family: $font-sans;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  background-color: $bg-light;
+  color: $text-dark;
+  min-height: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+.container {
+  width: 100%;
+  max-width: $container-max-width;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+
+
+
+.animated-gradient {
+  background-image: linear-gradient(270deg, rgba(71, 155, 201, 0.95), rgba(46, 62, 149, 0.75), rgba(71, 155, 201, 0.95));
+  background-size: 600% 600%;
+  animation: gradientMove 5s ease infinite;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+.char-animate {
+  display: inline-block;
+  animation: colorFade 2s infinite;
+}
+
+@keyframes colorFade {
+  0%, 100% {
+    color: #ffffff;
+  }
+  50% {
+    color: #61c1f5;
+  }
+}
+
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); 
+  }
+}
+
+.animate-scroll-left {
+  animation: scroll-left 15s linear infinite;
+  
+  &:hover {
+    animation-play-state: paused;
+  }
+}
+
+
+.learn-more {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  background: transparent;
+  padding: 0;
+  width: 12rem;
+  height: auto;
+
+  .circle {
+    transition: all 0.45s $ease-custom;
+    position: relative;
+    display: block;
+    margin: 0;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 1.625rem;
+
+    .icon {
+      transition: all 0.45s $ease-custom;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      background: $white;
+
+      &.arrow {
+        left: 0.625rem;
+        width: 1.125rem;
+        height: 0.125rem;
+        background: none;
+
+        &::before {
+          position: absolute;
+          content: "";
+          top: -0.29rem;
+          right: 0.0625rem;
+          width: 0.625rem;
+          height: 0.625rem;
+          border-top: 0.125rem solid $white;
+          border-right: 0.125rem solid $white;
+          transform: rotate(45deg);
+        }
+      }
+    }
+  }
+
+  .button-text {
+    transition: all 0.45s $ease-custom;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0.75rem 0;
+    margin: 0 0 0 1.85rem;
+    font-weight: 700;
+    line-height: 1.6;
+    text-align: center;
+    text-transform: uppercase;
+    color: $white;
+  }
+
+  &:hover {
+    .circle {
+      width: 100%;
+      .icon.arrow {
+        transform: translate(1rem);
+      }
+    }
+    .button-text {
+      color: $white;
+    }
+  }
+}
+
+
+.button-primary {
+  background-color: $accent-blue;
+  color: $white;
+  padding: 10px 25px;
+  font-weight: 500;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: background-color $transition-normal;
+
+  &:hover {
+    background-color: $primary-blue;
+  }
+}
+
+.button-secondary {
+  background-color: $accent-blue;
+  color: $white;
+  padding: 5px 10px;
+  font-weight: 500;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  transition: background-color $transition-normal;
+
+  &:hover {
+    background-color: $primary-blue;
+  }
+}
+
+.button-tertiary {
+  background-color: $primary-blue;
+  color: $white;
+  padding: 10px 25px;
+  font-weight: 500;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: background-color $transition-normal;
+
+  &:hover {
+    background-color: $secondary-blue;
+  }
+}
+
+
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.transform-style-preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}

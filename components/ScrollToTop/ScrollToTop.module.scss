@@ -1,0 +1,63 @@
+.button {
+    position: fixed;
+
+    z-index: 50;
+
+    right: 24px;
+    bottom: 24px;
+
+    width: 56px;
+    height: 56px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+
+    overflow: hidden;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #2e3e95;
+
+    color: white;
+
+    box-shadow:
+        0 2px 16px
+        rgba(44, 62, 149, 0.18);
+
+    cursor: pointer;
+
+    transition:
+        opacity 300ms ease,
+        transform 300ms ease;
+}
+
+.hidden {
+    opacity: 0;
+
+    pointer-events: none;
+
+    transform: translateY(10px);
+}
+
+.visible {
+    opacity: 1;
+
+    pointer-events: auto;
+
+    transform: translateY(0);
+}
+
+.icon {
+    position: relative;
+
+    z-index: 2;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}

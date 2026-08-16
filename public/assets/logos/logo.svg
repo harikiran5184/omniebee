@@ -1,0 +1,13 @@
+<svg viewBox="0 0 180 60" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2E3E95" />
+      <stop offset="100%" stop-color="#479BC9" />
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="none"/>
+  <circle cx="25" cy="30" r="18" fill="url(#g)"/>
+  <circle cx="25" cy="30" r="12" fill="#ffffff"/>
+  <circle cx="25" cy="30" r="6" fill="url(#g)"/>
+  <text x="55" y="38" font-family="system-ui, sans-serif" font-weight="bold" font-size="22" fill="#2E3E95">Omniebee</text>
+</svg>

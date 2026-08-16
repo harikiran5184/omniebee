@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+:root {
+    --primary: #2e3e95;
+    --secondary: #479bc9;
+    --light-blue: #56b9f0;
+    --white: #ffffff;
+    --black: #111111;
+    --text: #333333;
+    --light: #f7f9fc;
+
+    --container: 1200px;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    color: var(--text);
+    background: #fff;
+    overflow-x: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    font-family: inherit;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.container {
+    width: min(100% - 48px, var(--container));
+    margin-inline: auto;
+}
+
+.section {
+    padding: 90px 0;
+}
+
+.section-title {
+    color: var(--primary);
+    font-size: clamp(30px, 4vw, 46px);
+    font-weight: 700;
+}
+
+.section-subtitle {
+    color: #666;
+    margin-top: 15px;
+    line-height: 1.7;
+}
+
+.animated-gradient {
+    background: linear-gradient(270deg,
+            rgba(71, 155, 201, 0.95),
+            rgba(46, 62, 149, 0.75),
+            rgba(71, 155, 201, 0.95));
+
+    background-size: 600% 600%;
+
+    animation: gradientMove 5s ease infinite;
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: min(100% - 32px, var(--container));
+    }
+
+    .section {
+        padding: 65px 0;
+    }
+}
