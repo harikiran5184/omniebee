@@ -1,6 +1,6 @@
 import Image from "next/image";
 import styles from "./Services.module.scss";
-
+import { asset } from "@/src/lib/assets";
 const services = {
   staffing: {
     title: "Staffing Solutions",
@@ -102,7 +102,7 @@ function SmallServiceCard({ service }) {
       }`}
     >
       <Image
-        src={service.image}
+        src={asset(service.image)}
         alt={service.title}
         fill
         sizes="(max-width: 639px) 350px, 224px"
@@ -150,7 +150,7 @@ function TallServiceCard({ service }) {
       className={styles.tallCard}
     >
       <Image
-        src={service.image}
+        src={asset(service.image)}
         alt={service.title}
         fill
         sizes="(max-width: 639px) 350px, 192px"

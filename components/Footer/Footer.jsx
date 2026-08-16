@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./Footer.module.scss";
+import { asset } from "@/src/lib/assets";
 
 const services = [
   {
@@ -74,7 +75,7 @@ export default function Footer() {
 
             <div className={styles.brand}>
               <Image
-                src="/Home_files/rwgi0kbbc1j2h0s5ghof.png"
+                src={asset("/Home_files/rwgi0kbbc1j2h0s5ghof.png")}
                 alt="Omniebee Global Solutions"
                 width={50}
                 height={50}

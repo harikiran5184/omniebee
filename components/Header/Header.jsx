@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import "./Header.scss";
-
+import { asset } from "@/src/lib/assets";
 const services = [
   "Software Development",
   "IT Consulting",
@@ -56,7 +56,7 @@ export default function Header() {
 
             <div className="contact-item">
               <img
-                src="/Home_files/hsq28kdlxtl93osd4rcc.png"
+                src={asset("/Home_files/hsq28kdlxtl93osd4rcc.png")}
                 className="contact-icon"
                 alt="Phone"
               />
@@ -68,7 +68,7 @@ export default function Header() {
 
             <div className="contact-item">
               <img
-                src="/Home_files/mcf5y7yiuxidbq74tbnx.png"
+                src={asset("/Home_files/mcf5y7yiuxidbq74tbnx.png")}
                 className="contact-icon"
                 alt="Mail"
               />
@@ -88,7 +88,7 @@ export default function Header() {
               rel="noopener noreferrer"
             >
               <img
-                src="/Home_files/wphnzyux0lejcg0zfihy.png"
+                src={asset("/Home_files/wphnzyux0lejcg0zfihy.png")}
                 alt="LinkedIn"
               />
             </a>
@@ -99,7 +99,7 @@ export default function Header() {
               rel="noopener noreferrer"
             >
               <img
-                src="/Home_files/a0nh38idxulyivrmdnbr.png"
+                src={asset("/Home_files/a0nh38idxulyivrmdnbr.png")}
                 alt="Facebook"
               />
             </a>
@@ -110,7 +110,7 @@ export default function Header() {
               rel="noopener noreferrer"
             >
               <img
-                src="/Home_files/nyp1fs2nuycmasg2ivtv.png"
+                src={asset("/Home_files/nyp1fs2nuycmasg2ivtv.png")}
                 alt="Instagram"
               />
             </a>
@@ -136,7 +136,7 @@ export default function Header() {
 
             <Link href="/">
               <img
-                src="/Home_files/xgpxo1mdjplj63nmfljs.jpg"
+                src={asset("/Home_files/xgpxo1mdjplj63nmfljs.jpg")}
                 alt="Logo"
                 width="180"
                 height="60"

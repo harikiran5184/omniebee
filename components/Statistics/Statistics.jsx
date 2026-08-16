@@ -1,6 +1,6 @@
 import Image from "next/image";
 import styles from "./Statistics.module.scss";
-
+import { asset } from "@/src/lib/assets";
 const stats = [
   {
     value: "50+",
@@ -28,7 +28,7 @@ export default function Stats() {
         
         <div className={styles.logoWrapper}>
           <Image
-            src="/Home_files/tdkuygqntdjl8ktwkmeu.png"
+            src={asset("/Home_files/tdkuygqntdjl8ktwkmeu.png")}
             alt="Omniebee Logo"
             fill
             sizes="(max-width: 639px) 250px, 350px"

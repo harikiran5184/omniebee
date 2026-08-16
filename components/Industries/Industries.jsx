@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import styles from "./Industries.module.scss";
-
+import { asset } from "@/src/lib/assets";
 const industries = [
   {
     title: "Healthcare",
@@ -84,7 +84,7 @@ export default function Industries() {
                 <div className={styles.cardFront}>
 
                   <img
-                    src={industry.image}
+                    src={asset(industry.image)}
                     alt={industry.title}
                     className={styles.industryIcon}
                   />
@@ -138,7 +138,7 @@ export default function Industries() {
                   aria-expanded={isOpen}
                 >
                   <img
-                    src={industry.image}
+                    src={asset(industry.image)}
                     alt={industry.title}
                     className={styles.mobileIcon}
                   />

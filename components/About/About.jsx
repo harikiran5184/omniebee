@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import styles from "./About.module.scss";
-
+import { asset } from "@/src/lib/assets";
 const images = {
   experience: "/Home_files/hddhm1xqms2fqm8cuw9p.png",
   support: "/Home_files/icoioggd4i5unmgth0de.png",
@@ -61,7 +61,7 @@ export default function AboutIntro() {
   return (
     <section className={styles.section}>
 
-      
+
       <div
         className={styles.dots}
         aria-hidden="true"
@@ -83,7 +83,7 @@ export default function AboutIntro() {
       </div>
 
 
-      
+
       <div className={styles.container}>
 
         <div className={styles.content}>
@@ -116,7 +116,7 @@ export default function AboutIntro() {
 
               <div className={styles.featureTitle}>
                 <Image
-                  src={images.experience}
+                  src={asset(images.experience)}
                   alt="Experience"
                   width={24}
                   height={24}
@@ -138,7 +138,7 @@ export default function AboutIntro() {
 
               <div className={styles.featureTitle}>
                 <Image
-                  src={images.support}
+                  src={asset(images.support)}
                   alt="Support"
                   width={24}
                   height={24}
@@ -159,13 +159,13 @@ export default function AboutIntro() {
         </div>
 
 
-        
+
 
         <div className={styles.imageGrid}>
 
           <div className={styles.leftTall}>
             <Image
-              src={images.leftTall}
+              src={asset(images.leftTall)}
               alt="Omniebee Global Solutions"
               width={400}
               height={500}
@@ -174,7 +174,7 @@ export default function AboutIntro() {
 
           <div className={styles.topRight}>
             <Image
-              src={images.topRight}
+              src={asset(images.topRight)}
               alt="Digital Solutions"
               width={200}
               height={200}
@@ -183,7 +183,7 @@ export default function AboutIntro() {
 
           <div className={styles.bottomRight}>
             <Image
-              src={images.bottomRight}
+              src={asset(images.bottomRight)}
               alt="Technology Solutions"
               width={200}
               height={200}

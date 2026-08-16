@@ -1,5 +1,6 @@
 import Image from "next/image";
 import styles from "./Technologies.module.scss";
+import { asset } from "@/src/lib/assets";
 
 const technologies = [
   {
@@ -49,7 +50,7 @@ export default function Technologies() {
             >
               <div className={styles.iconWrapper}>
                 <Image
-                  src={technology.image}
+                  src={asset(technology.image)}
                   alt={technology.name}
                   fill
                   priority

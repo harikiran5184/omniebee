@@ -1,6 +1,6 @@
 import Link from "next/link";
 import styles from "./Hero.module.scss";
-
+import { asset } from "@/src/lib/assets";
 const HERO_IMAGE =
   "/Home_files/ciuh9ims7hdv22ifsg7a.jpg";
 
@@ -9,9 +9,9 @@ const title = "Building your Future-Ready Solutions";
 export default function Hero() {
   return (
     <section className={styles.hero}>
-      
+
       <img
-        src={HERO_IMAGE}
+        src={asset(HERO_IMAGE)}
         alt="Hero Banner"
         width={1920}
         height={750}
@@ -19,14 +19,14 @@ export default function Hero() {
         className={styles.heroImage}
       />
 
-      
+
       <div className={styles.overlay} />
 
-      
+
       <div className={styles.contentWrapper}>
         <div className={styles.content}>
 
-          
+
           <p className={styles.eyebrow}>
             <span className={styles.eyebrowLine} />
 
@@ -38,7 +38,7 @@ export default function Hero() {
           </p>
 
 
-          
+
           <div className={styles.desktopContent}>
 
             <h1 className={styles.title}>
@@ -76,7 +76,7 @@ export default function Hero() {
           </div>
 
 
-          
+
           <div className={styles.buttonWrapper}>
             <Link href="/about">
               <button

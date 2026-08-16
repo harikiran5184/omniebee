@@ -1,13 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./CareersCTA.module.scss";
-
+import { asset } from "@/src/lib/assets";
 export default function Careers() {
   return (
     <section className={styles.careers}>
       
       <Image
-        src="/Home_files/vzveb2gtjhwdi0slpu9p.jpg"
+        src={asset("/Home_files/vzveb2gtjhwdi0slpu9p.jpg")}
         alt="Innovation Background"
         fill
         priority
